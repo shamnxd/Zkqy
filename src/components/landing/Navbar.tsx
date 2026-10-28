@@ -21,16 +21,16 @@ export default function Navbar() {
           mobileOpen ? "max-md:w-full" : "max-md:w-0"
         }`}
       >
-        <a href="#" onClick={() => setMobileOpen(false)} className="text-gray-50 hover:text-white text-sm">
+        <a href="/" onClick={() => setMobileOpen(false)} className="text-white hover:text-white text-sm">
           Home
         </a>
-        <a href="#features" onClick={() => setMobileOpen(false)} className="text-gray-50 hover:text-white text-sm">
+        <a href="#features" onClick={() => setMobileOpen(false)} className="text-white/95 hover:text-white text-sm">
           Solutions
         </a>
-        <a href="#faq" onClick={() => setMobileOpen(false)} className="text-gray-50 hover:text-white text-sm">
+        <a href="#faq" onClick={() => setMobileOpen(false)} className="text-white/95 hover:text-white text-sm">
           Services
         </a>
-        <a href="#faq" onClick={() => setMobileOpen(false)} className="text-gray-50 hover:text-white text-sm">
+        <a href="#faq" onClick={() => setMobileOpen(false)} className="text-white/95 hover:text-white text-sm">
           FAQ
         </a>
 
@@ -48,7 +48,7 @@ export default function Navbar() {
       </div>
 
       <div className="flex items-center gap-2">
-        <ContactTrigger className="hidden md:inline-block bg-white hover:bg-white/90 text-zinc-600 px-6 py-3 rounded-full text-sm font-medium transition cursor-pointer">
+        <ContactTrigger className="hidden md:inline-block bg-white hover:bg-white/90 text-zinc-800 px-6 py-3 rounded-full text-sm font-medium transition cursor-pointer">
           Contact Us
         </ContactTrigger>
         <button

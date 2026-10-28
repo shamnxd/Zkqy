@@ -11,7 +11,7 @@ export default function HeroActions() {
       >
         Explore Solutions
       </a>
-      <ContactTrigger className="bg-white hover:bg-white/90 text-sm text-zinc-600 px-5 py-3 rounded-full tracking-tight transition cursor-pointer font-medium">
+      <ContactTrigger className="bg-white hover:bg-white/90 text-sm text-zinc-800 px-5 py-3 rounded-full tracking-tight transition cursor-pointer font-medium">
         Talk to Us
       </ContactTrigger>
     </div>

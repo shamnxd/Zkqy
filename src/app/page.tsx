@@ -39,7 +39,14 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
-      <main>
+      <a
+        href="#features"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-[200] focus:bg-white focus:text-zinc-900 focus:px-4 focus:py-2 focus:rounded-lg focus:shadow"
+      >
+        Skip to content
+      </a>
+
+      <main id="main-content">
         <header className="flex flex-col items-center bg-gradient-to-b from-[#ff4500] to-white px-4 pt-6">
           <Navbar />
 
