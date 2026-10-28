@@ -47,21 +47,24 @@ export default function Home() {
       </a>
 
       <main id="main-content">
-        <header className="flex flex-col items-center bg-gradient-to-b from-[#ff4500] to-white px-4 pt-6">
+        <header className="flex flex-col items-center bg-gradient-to-b from-[#ff4500] to-white px-4 pt-5 md:pt-6 pb-0">
           <Navbar />
 
-          <h1 className="text-5xl md:text-[62px]/18 text-white text-center max-w-[780px] mt-24 md:mt-30 leading-tight font-medium tracking-tighter">
-            ERP & AI Automation
-            <br />
-            A Complete Tech Partner
-          </h1>
+          <div className="flex flex-col items-center w-full max-w-[780px] mt-12 sm:mt-16 md:mt-30 px-1">
+            <h1 className="text-[34px] leading-[1.12] sm:text-5xl md:text-[62px]/18 text-white text-center font-medium tracking-tighter">
+              <span className="block">ERP & AI Automation</span>
+              <span className="block mt-1.5 md:mt-0">A Complete Tech Partner</span>
+            </h1>
 
-          <p className="text-sm md:text-base/6.5 text-white text-center max-w-[600px] mt-2 font-normal">
-            Unify operations, automate workflows, and scale faster{" "}
-            <br className="hidden sm:block" /> with software built for real businesses.
-          </p>
+            <p className="text-[13px] leading-relaxed sm:text-sm md:text-base/6.5 text-white/95 text-center max-w-[340px] sm:max-w-[600px] mt-3 md:mt-2 font-normal">
+              Unify operations, automate workflows, and scale faster
+              <span className="hidden sm:inline"> </span>
+              <br className="hidden sm:block" />
+              with software built for real businesses.
+            </p>
 
-          <HeroActions />
+            <HeroActions />
+          </div>
 
           <HeroMockup />
         </header>

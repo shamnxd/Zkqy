@@ -51,24 +51,24 @@ const chartBars = [38, 52, 44, 68, 55, 72, 61, 80, 74, 88, 70, 92];
 
 export default function HeroMockup() {
   return (
-    <div className="mt-12.5 w-full">
-      <div className="w-full max-w-[960px] mx-auto border-4 md:border-8 border-orange-300 rounded-2xl md:rounded-t-2xl md:rounded-b-none md:border-b-0 bg-white text-left shadow-2xl overflow-hidden">
+    <div className="mt-7 sm:mt-10 md:mt-12.5 w-full">
+      <div className="relative w-full max-w-[960px] mx-auto border-[3px] md:border-8 border-orange-300 rounded-xl md:rounded-t-2xl md:rounded-b-none md:border-b-0 bg-white text-left shadow-2xl overflow-hidden max-md:max-h-[280px]">
         {/* Window chrome */}
-        <div className="flex items-center justify-between px-4 sm:px-5 py-3 border-b border-slate-100 bg-slate-50/80">
-          <div className="flex items-center gap-3">
-            <div className="flex items-center gap-1.5 mr-1" aria-hidden="true">
+        <div className="flex items-center justify-between px-3 sm:px-5 py-2.5 sm:py-3 border-b border-slate-100 bg-slate-50/80">
+          <div className="flex items-center gap-2 sm:gap-3 min-w-0">
+            <div className="flex items-center gap-1.5 mr-1 shrink-0" aria-hidden="true">
               <div className="w-2.5 h-2.5 rounded-full bg-rose-400" />
               <div className="w-2.5 h-2.5 rounded-full bg-amber-400" />
               <div className="w-2.5 h-2.5 rounded-full bg-emerald-400" />
             </div>
-            <Logo className="w-6 h-6" variant="orange" />
-            <span className="text-sm font-semibold tracking-tight text-slate-900">Zkqy ERP</span>
+            <Logo className="w-5 h-5 sm:w-6 sm:h-6" variant="orange" />
+            <span className="text-xs sm:text-sm font-semibold tracking-tight text-slate-900 truncate">Zkqy ERP</span>
             <span className="hidden sm:inline text-[10px] px-2 py-0.5 rounded bg-orange-50 text-[#ff4500] border border-orange-100 font-medium">
               Production
             </span>
           </div>
 
-          <div className="flex items-center gap-2 sm:gap-3">
+          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
             <div className="relative hidden sm:block">
               <Search className="w-3.5 h-3.5 text-slate-400 absolute left-2.5 top-1/2 -translate-y-1/2" />
               <input
@@ -94,9 +94,9 @@ export default function HeroMockup() {
           </div>
         </div>
 
-        <div className="flex min-h-[340px] md:min-h-[390px]">
-          {/* ERP sidebar */}
-          <aside className="hidden sm:flex w-[148px] md:w-[168px] shrink-0 flex-col border-r border-slate-100 bg-slate-50/60 py-3 px-2 gap-0.5 overflow-hidden">
+        <div className="flex min-h-[340px] md:min-h-[390px] max-md:min-w-[560px] max-md:origin-top-left max-md:scale-[0.72]">
+          {/* ERP sidebar — shown on mobile peek too */}
+          <aside className="flex w-[120px] sm:w-[148px] md:w-[168px] shrink-0 flex-col border-r border-slate-100 bg-slate-50/60 py-3 px-2 gap-0.5 overflow-hidden">
             <div className="flex-1 space-y-0.5 overflow-hidden">
               {navItems.map((item) => {
                 const Icon = item.icon;
@@ -241,6 +241,12 @@ export default function HeroMockup() {
             </div>
           </div>
         </div>
+
+        {/* Soft fade on mobile peek */}
+        <div
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-14 bg-gradient-to-t from-white via-white/80 to-transparent md:hidden"
+          aria-hidden="true"
+        />
       </div>
     </div>
   );
